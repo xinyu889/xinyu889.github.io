@@ -1,7 +1,464 @@
-<html>
-    <head>
-    </head>
-    <body>
-        Hello World!
-    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>110上 Paper統整</title>
+    <link rel="icon" type="image/png" href="immigration.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <script src="app.js" defer></script>
+    <script src="echarts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="referrer" content="no-referrer">
+</head>
+<body>
+    <div id="mainBody">
+        <div id="topTitle">19+3篇 論文統整報告</div>
+        <div id="topText">統計圖、論文回顧(簡介/領域摘要)、有興趣的方向</div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+            </div>
+        </div>
+          
+        <!-- echart -->
+        <div id="chartContainer">
+            <div>
+                <div class="chartTitle">Domain</div>
+                <div id="chartDomain" class="chart"></div>
+            </div>
+            <div>
+                <div class="chartTitle">Signal</div>
+                <div id="chartSignal" class="chart"></div>
+            </div>
+            <div>
+                <div class="chartTitle">Hardware</div>
+                <div id="chartHardware" class="chart"></div>
+            </div>
+        </div>
+        
+        <!-- table -->
+        <div id="sortTable">
+            <!-- Facial Expressions & Other -->
+            <table class="table table-hover caption-top">
+                <caption style="background-color: #9aca839a">Facial Expressions & Other</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">feature</th>
+                        <th scope="col">signal</th>
+                        <th scope="col">hardware</th>
+                        <th scope="col">accuracy</th>
+                        <th scope="col">application</th>
+                        <th scope="col">detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" >FaExpre</th>
+                        <td>Ear canal</td>
+                        <td>Ultrasonic</td>
+                        <td>Earphone</td>
+                        <td>11 user, 21 AU, 62-90%</td>
+                        <td>-</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Facial expression recognition using ear canal transfer function/K6dezLl">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" >ExpressEar</th>
+                        <td>Ear canal</td>
+                        <td>IMU</td>
+                        <td>Earphone</td>
+                        <td>12 user, 32 AU, 89%</td>
+                        <td>-</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="ExpressEar: Sensing Fine-Grained Facial Expressions with Earables/j3rTkEE">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" >NeckFace</th>
+                        <td>Jaw </td>
+                        <td>IR image</td>
+                        <td>Necklace</td>
+                        <td>13 user, 8 AU, -</td>
+                        <td>Indoor</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="NeckFace: Continuously Tracking Full Facial Expressions on Neck-mounted Wearables/SST0X4f">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">LivIOT</th>
+                        <td>-</td>
+                        <td>ISM Band</td>
+                        <td>Antenna</td>
+                        <td>err range: 4m</td>
+                        <td>Farm, Bee</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Living IoT: A Flying Wireless Platform on Live Insects/owNBkTS">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Summary</button>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <!-- Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. -->
+                    
+                    <div class="sumContainer">
+                        <div class="sumLine">
+                            <i class="md-36  material-icons" style="color: rgb(231, 73, 99);">task_alt</i>
+                            <div class="inline-block"> eSence是OpenSource的! 若要使用無線耳機可以使用 (IMU、Mic、Speaker)</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">臉上有哪個部位的肌肉具有代表性? 針對表情辨識可以想其他環境 如隱藏的真實表情之類</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">表情辨識: 若單個角度影像有誤 或許可以用多個合成 (類似多車子環景效果)</div>
+                        </div> 
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">生物IOT: 在電線杆裝掃描裝置 預測走失貓狗可能出現的位置 (偏分析整合應用)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Handwriting & Gesture Recognition -->
+            <table class="table table-hover caption-top">
+                <caption style="background-color: #ffdd6cb6">Handwriting & Gesture Recognition</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">feature</th>
+                        <th scope="col">signal</th>
+                        <th scope="col">hardware</th>
+                        <th scope="col">accuracy</th>
+                        <th scope="col">application</th>
+                        <th scope="col">detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">WrittingRecorder</th>
+                        <td>Writting sound</td>
+                        <td>sound</td>
+                        <td>Mobile Phone</td>
+                        <td>24 user,  92%</td>
+                        <td>Office</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Learning to Recognize Handwriting Input with Acoustic Features/YsuK5My">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">UbiWriter</th>
+                        <td>Writting sound</td>
+                        <td>sound</td>
+                        <td>Mobile Phone</td>
+                        <td>10 user, 93%</td>
+                        <td>Office</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Ubiquitous Writer: Robust Text Input for Small Mobile Devices via Acoustic Sensing/8i5J6da">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fabriccio</th>
+                        <td>reflection</td>
+                        <td>Ultrasonic</td>
+                        <td>Fabrics Antenna</td>
+                        <td>10 user, 11 gesture, 87%</td>
+                        <td>Home</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Fabriccio: Touchless Gestural Input on Interactive Fabrics/M0g2D61">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">VSkin</th>
+                        <td>structure, air sound</td>
+                        <td>Ultrasonic (ZC)</td>
+                        <td>Mobile Phone</td>
+                        <td>15 user, 90%</td>
+                        <td>Mobile Phone</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="VSkin: Sensing Touch Gestures on Surfaces of Mobile Devices Using Acoustic Signals/LyTQWmm">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">WR-Hand</th>
+                        <td>muscle</td>
+                        <td>EMG</td>
+                        <td>Armband</td>
+                        <td>18 user, 12 gesture, 20mm</td>
+                        <td>-</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="WR-Hand: Wearable Armband Can Track User's Hand/Lr6HASm">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ShadowSense</th>
+                        <td>shadow</td>
+                        <td>RGB image</td>
+                        <td>Cam</td>
+                        <td>4 user, 6 gesture, 92%</td>
+                        <td>Robot, IOT</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="ShadowSense: Detecting Human Touch in a Social Robot Using Shadow Image Classification/wNl1yuv">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">Summary</button>
+            <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+                    <!-- Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. -->
+                    <div class="sumContainer">
+                        <div class="sumLine">
+                            <i class="md-36  material-icons" style="color: rgb(73, 146, 58);">highlight_off</i>
+                            <div class="inline-block">手勢辨識會不會RFID也可以做到? IMU已有很成熟的應用怎麼突破!</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons" style="color: rgb(231, 73, 99);">task_alt</i>
+                            <div class="inline-block">利用聲速的特性 將聲音拆成結構音和空氣音的可行性高！ (用訊號物理差異增加特徵)</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">EMG極限在哪? 是否有更適合應用它的環境?  → 空間繪圖增加力道(EMG肌肉出力)</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">寫字辨識 → 用聲波回推距離 實作不用充電的筆！  → (反向)用一支手機就可竊聽寫字的重要資料</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Authentication -->
+            <table class="table table-hover caption-top">
+                <caption style="background-color: #92d2e29a">Authentication</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">feature</th>
+                        <th scope="col">signal</th>
+                        <th scope="col">hardware</th>
+                        <th scope="col">accuracy</th>
+                        <th scope="col">application</th>
+                        <th scope="col">detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ConRes</th>
+                        <td>Respiratory</td>
+                        <td>Wi-Fi (CSI)</td>
+                        <td>Laptop</td>
+                        <td>20 user, 90%</td>
+                        <td>Office (small)</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Continuous User Verification via Respiratory Biometrics/jZiHo5f">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">RadRes</th>
+                        <td>Respiratory</td>
+                        <td>Doppler Radar</td>
+                        <td>Antenna</td>
+                        <td>10 user, 92%</td>
+                        <td>Office</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Respiratory Feature Extraction for Radar-Based Continuous Identity Authentication/iGw7NRT">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">TouchPass</th>
+                        <td>Touch</td>
+                        <td>Vibration</td>
+                        <td>Mobile Phone</td>
+                        <td>75 user, 93%</td>
+                        <td>Mobile Phone</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="TouchPass: Towards Behavior-irrelevant on-touch User Authentication on Smartphones Leveraging Vibrations/OYWtYqy">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">VibWrite</th>
+                        <td>Touch</td>
+                        <td>Vibration</td>
+                        <td>solid surface</td>
+                        <td>15 user, (PIN,graph), 94%</td>
+                        <td>Home, office…</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="VibWrite: Towards Finger-input Authentication on Ubiquitous Surfaces via Physical Vibration/mr9cx80">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">LipRead</th>
+                        <td>Lip</td>
+                        <td>Ultrasonic</td>
+                        <td>Mobile Phone</td>
+                        <td>48 user, 88%</td>
+                        <td>Mobile Phone</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="Lip Reading-Based User Authentication Through Acoustic Sensing on Smartphones/JemQpGb">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SilentSign</th>
+                        <td>Signature</td>
+                        <td>Ultrasonic</td>
+                        <td>Mobile Phone</td>
+                        <td>35 user, 91%</td>
+                        <td>Writing</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="SilentSign: Device-free Handwritten Signature Verification through Acoustic Sensing/cAlOX04">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MU-ID</th>
+                        <td>Gait</td>
+                        <td>mmWave Radar</td>
+                        <td>Antenna</td>
+                        <td>10 user, 95%</td>
+                        <td>Office (small)</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="MU-ID: Multi-user Identification Through Gaits Using Millimeter Wave Radios/8CDVBeG">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">EarGate</th>
+                        <td>Gait sound</td>
+                        <td>Sound</td>
+                        <td>Earphone</td>
+                        <td>31 user, 89%</td>
+                        <td>-</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="EarGate: gait-based user identification with in-ear microphones/0JfQDLo">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">EarDynamic</th>
+                        <td>Ear canal</td>
+                        <td>Ultrasonic</td>
+                        <td>Earphone</td>
+                        <td>24 user, 92%</td>
+                        <td>-</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                            data-bs-whatever="EarDynamic: An Ear Canal Deformation Based Continuous User Authentication Using In-Ear Wearables/plwsCIT">
+                            <span class="material-icons">search</span>
+                        </button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">Summary</button>
+            <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                    <!-- Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. -->
+                
+                    <div class="sumContainer">
+                        <div class="sumLine">
+                            <i class="md-36  material-icons" style="color: rgb(73, 146, 58);">highlight_off</i>
+                            <div class="inline-block">身分驗證若用太間接的方法有準確性的疑慮、情境模擬太單純不夠可靠</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons" style="color: rgb(231, 73, 99);">task_alt</i>
+                            <div class="inline-block">針對步態聲音需要多考慮鞋子、地板材質的影響；有特別討論Attack影響，並針對攻擊進行測試 (必要性?)</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">聲音可以穿透口罩 現在疫情需要戴口罩 感覺有情境可以想！</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">針對耳機的應用 討論左耳跟右耳的關聯性 (時間差、不完全對稱的訊號差異)</div>
+                        </div>
+                        <div class="sumLine">
+                            <i class="md-36  material-icons">bookmark</i>
+                            <div class="inline-block">利用入耳式的閉鎖效應 耳道吸音的差異做疾病偵測</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="summary"> -->
+        <div class="SumTitle">有興趣的方向</div>
+        <div class="card">
+            <div class="card-header">
+                <i class="md-24  material-icons">bookmark</i>身分驗證
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>透過震波分析行為特性、結合其他訊號(腳步聲/特定節奏)、跟平面有關的驗證</p>
+                <footer class="blockquote-footer">驗證痛點：怎麼打贏現有技術、實驗環境應豐富而非太過保守、現有技術有哪些、怎麼吸引人使用?</footer>
+              </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="md-24  material-icons">bookmark</i>側通道攻擊
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>透過手機竊聽寫字、按按鍵的聲音，藉此獲得重要密碼或是文字訊息</p>
+                <footer class="blockquote-footer">對資安的掌握度不夠、現有的文獻是否已足夠成熟?、有哪些場景可能會被攻擊?</footer>
+              </blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="md-24  material-icons">bookmark</i>耳機的應用
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>耳機普及率相當高、或許可以也變成監測健康工具(呼吸方式判斷肺受傷?)、其他適合場景</p>
+                <footer class="blockquote-footer">耳機的應用是否已飽和? 、硬體限制(是否有除eSence以外的商用開源設備)、訊號處理能力需要多加強</footer>
+              </blockquote>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer"></footer>
+    
+    
+</body>
 </html>
