@@ -1,0 +1,30 @@
+#topTitle {
+    font-size: 4.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 80px;
+}
+#topText {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #585858;
+    margin: 20px 0 50px 0;
+}
+.chartTitle {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+caption {
+    
+    font-weight: 800;
+    color: #4c4c4c;
+    padding-left: 10px;
+}
+
+caption {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #6c757d;
+    text-align: left;
+}
