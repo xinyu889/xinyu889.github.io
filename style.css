@@ -15,8 +15,39 @@
     font-weight: 800;
     font-size: 1.5rem;
 }
+.SumTitle {
+    margin: 20vh 0 2vh 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: rgba(255, 60, 60, 0.575);
+    padding: 10px 0 10px 10px;
+    color: white;
+}
+.card {
+    margin-bottom: 30px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.card-header {
+    font-size: 1.2rem;
+}
+
+.card-header {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
 caption {
-    
     font-weight: 800;
     color: #4c4c4c;
     padding-left: 10px;
